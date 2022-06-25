@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="billingManagementAnchPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.ardms.controller.BillingManagementController">
+   <children>
+      <Pane prefHeight="650.0" prefWidth="130.0" style="-fx-background-color: #FF5C58;">
+         <children>
+            <HBox fx:id="homeHBox" layoutX="1.0" onMouseClicked="#loadMainDash" prefHeight="57.0" prefWidth="130.0" styleClass="sidepane-HBox" stylesheets="@style/billingmanagement.css">
+               <children>
+                  <ImageView>
+                     <image>
+                        <Image url="@../asset/icons8_Home_32px_3.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="8.0" top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="Home" textFill="#2f3438">
+                     <HBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Century Gothic Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="customerReturnsHBox" layoutY="57.0" onMouseClicked="#loadCustomerReturns" prefHeight="57.0" prefWidth="130.0" styleClass="sidepane-HBox" stylesheets="@style/billingmanagement.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <children>
+                  <ImageView>
+                     <image>
+                        <Image url="@../asset/icons8_Return_Purchase_32px_1.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="8.0" top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="Customer&#10;Returns" textFill="#2f3438">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="paymentDetailsHBox" layoutX="1.0" layoutY="114.0" onMouseClicked="#loadPaymentDetails" prefHeight="57.0" prefWidth="130.0" styleClass="sidepane-HBox" stylesheets="@style/billingmanagement.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <children>
+                  <ImageView>
+                     <image>
+                        <Image url="@../asset/icons8_Payment_History_32px.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="8.0" top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="Payment&#10;Details" textFill="#2f3438">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="viewMoreHBox" layoutX="1.0" layoutY="171.0" onMouseClicked="#showViewMoreWindow" prefHeight="57.0" prefWidth="130.0" styleClass="sidepane-HBox" stylesheets="@style/billingmanagement.css">
+               <children>
+                  <ImageView>
+                     <image>
+                        <Image url="@../asset/icons8_View_More_32px_2.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="8.0" top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="View&#10;More" textFill="#2f3438">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="helpHBox" layoutY="228.0" onMouseClicked="#showHelpWindow" prefHeight="57.0" prefWidth="130.0" styleClass="sidepane-HBox" stylesheets="@style/billingmanagement.css">
+               <children>
+                  <ImageView>
+                     <image>
+                        <Image url="@../asset/icons8_Help_32px_4.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="8.0" top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="Help" textFill="#2f3438">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+         </children>
+      </Pane>
+      <Pane layoutX="130.0" prefHeight="650.0" prefWidth="921.0">
+         <children>
+            <Pane prefHeight="57.0" prefWidth="921.0" style="-fx-background-color: #2F3438;">
+               <children>
+                  <Label layoutX="14.0" layoutY="13.0" text="Manage Billing" textFill="#ff5c58">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="57.0" fitWidth="228.0" layoutX="689.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/14462945_1155325894524034_2665961260466615516_n.jpg" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ImageView fitHeight="656.0" fitWidth="594.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/39461886-clothes-wallpapers.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="656.0" fitWidth="594.0" layoutX="327.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/39461886-clothes-wallpapers.png" />
+               </image>
+            </ImageView>
+            <Pane layoutY="57.0" opacity="0.9" prefHeight="594.0" prefWidth="921.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Pane layoutX="6.0" layoutY="1.0" prefHeight="110.0" prefWidth="910.0" style="-fx-border-color: #8F8F8F; -fx-border-width: 2; -fx-border-radius: 10;">
+                     <children>
+                        <JFXComboBox fx:id="customerIdComboBox" editable="true" focusColor="#d64d4b" labelFloat="true" layoutX="478.0" layoutY="27.0" onAction="#customerIdComboBox_onAction" onKeyReleased="#customerIdComboBox_onKeyReleased" prefHeight="25.0" prefWidth="149.0" promptText="Customer ID" />
+                        <TextField fx:id="billNoTF" editable="false" layoutX="143.0" layoutY="27.0" mouseTransparent="true" />
+                        <TextField fx:id="refNoTF" editable="false" layoutX="143.0" layoutY="68.0" mouseTransparent="true" />
+                        <TextField fx:id="dateTF" editable="false" layoutX="747.0" layoutY="20.0" mouseTransparent="true" prefHeight="28.0" prefWidth="149.0" promptText="Date">
+                           <font>
+                              <Font name="Century Gothic Italic" size="14.0" />
+                           </font></TextField>
+                        <Label layoutX="75.0" layoutY="30.0" text="Bill No : ">
+                           <font>
+                              <Font name="Century Gothic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="71.0" text="Reference No : ">
+                           <font>
+                              <Font name="Century Gothic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="689.0" layoutY="22.0" text="Date : ">
+                           <font>
+                              <Font name="Century Gothic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="653.0" layoutY="71.0" text="Cashier ID: ">
+                           <font>
+                              <Font name="Century Gothic" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="cashierIdTF" editable="false" layoutX="747.0" layoutY="66.0" mouseTransparent="true" prefHeight="30.0" prefWidth="149.0">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font></TextField>
+                        <Label layoutX="361.0" layoutY="30.0" text="Customer ID :">
+                           <font>
+                              <Font name="Century Gothic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="328.0" layoutY="71.0" text="Customer Name :">
+                           <font>
+                              <Font name="Century Gothic" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="customerNameTF" editable="false" layoutX="478.0" layoutY="68.0" mouseTransparent="true" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="6.0" layoutY="453.0" prefHeight="98.0" prefWidth="910.0" style="-fx-border-color: #8F8F8F; -fx-border-radius: 10; -fx-border-width: 2;">
+                     <children>
+                        <Label layoutX="7.0" layoutY="17.0" text="Total Items : " textFill="#006666">
+                           <font>
+                              <Font name="Century Gothic Bold Italic" size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="totalItemsTF" editable="false" layoutX="121.0" layoutY="13.0" mouseTransparent="true" prefHeight="29.0" prefWidth="102.0">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="593.0" layoutY="67.0" prefHeight="22.0" prefWidth="121.0" text="Net Amount : " textFill="#ff3e2f">
+                           <font>
+                              <Font name="Century Gothic Bold Italic" size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="netAmountTF" editable="false" layoutX="720.0" layoutY="64.0" mouseTransparent="true" prefHeight="20.0" prefWidth="173.0">
+                           <font>
+                              <Font name="Century Gothic Bold Italic" size="15.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="623.0" layoutY="36.0" text="Discount : " textFill="#f06810">
+                           <font>
+                              <Font name="Century Gothic Bold Italic" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="586.0" layoutY="6.0" prefHeight="22.0" prefWidth="130.0" text="Total Amount : " textFill="#fe9900">
+                           <font>
+                              <Font name="Century Gothic Bold Italic" size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="discountTF" editable="false" layoutX="720.0" layoutY="33.0" mouseTransparent="true" prefHeight="22.0" prefWidth="173.0">
+                           <font>
+                              <Font name="Century Gothic Bold Italic" size="15.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="totalAmountTF" editable="false" layoutX="720.0" layoutY="3.0" mouseTransparent="true" prefHeight="20.0" prefWidth="173.0">
+                           <font>
+                              <Font name="Century Gothic Bold Italic" size="15.0" />
+                           </font>
+                        </TextField>
+                        <JFXTextField fx:id="discountPercentageTF" focusColor="#d64d4b" labelFloat="true" layoutX="489.0" layoutY="30.0" onKeyReleased="#discountPercentageTF_onKeyReleased" prefHeight="25.0" prefWidth="69.0" promptText="Discount" />
+                        <Label layoutX="544.0" layoutY="29.0" prefHeight="22.0" prefWidth="28.0" text="\%">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="-6.0" layoutY="549.0" prefHeight="47.0" prefWidth="934.0">
+                     <children>
+                        <JFXButton fx:id="paymentBtn" buttonType="RAISED" layoutX="804.0" layoutY="9.0" onMouseClicked="#loadBillPayments" prefHeight="30.0" prefWidth="102.0" styleClass="btnPane-paymentBtn" stylesheets="@style/billingmanagement.css" text="Payment &gt;&gt;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Italic" size="13.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="6.0" layoutY="115.0" prefHeight="94.0" prefWidth="910.0" style="-fx-border-color: #8F8F8F; -fx-border-width: 2; -fx-border-radius: 10;">
+                     <children>
+                        <TextField fx:id="nameTF" editable="false" layoutX="210.0" layoutY="20.0" mouseTransparent="true" promptText="Name" />
+                        <TextField fx:id="unitPriceTF" editable="false" layoutX="421.0" layoutY="20.0" mouseTransparent="true" prefHeight="25.0" prefWidth="115.0" promptText="Unit Price" />
+                        <TextField fx:id="QtyOnHandTF" editable="false" layoutX="600.0" layoutY="20.0" mouseTransparent="true" prefHeight="25.0" prefWidth="115.0" promptText="Qty.onHand" />
+                        <JFXTextField fx:id="qtyTF" focusColor="#d64d4b" labelFloat="true" layoutX="761.0" layoutY="20.0" onAction="#qtyTF_onAction" promptText="Qty" />
+                        <JFXButton fx:id="removeBtn" buttonType="RAISED" layoutX="715.0" layoutY="57.0" onAction="#removeBtn_onAction" prefHeight="30.0" prefWidth="81.0" styleClass="btnPane-removeBtn" stylesheets="@style/billingmanagement.css" text="Remove">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Italic" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="addBtn" buttonType="RAISED" layoutX="600.0" layoutY="57.0" onAction="#addBtn_onAction" prefHeight="30.0" prefWidth="81.0" styleClass="btnPane-addBtn" stylesheets="@style/billingmanagement.css" text="Add">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Italic" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXComboBox fx:id="itemCodeComboBox" editable="true" focusColor="#d64d4b" labelFloat="true" layoutX="33.0" layoutY="20.0" onAction="#itemCodeComboBox_onAction" onKeyReleased="#itemCodeComboBox_onKeyReleased" prefHeight="25.0" prefWidth="130.0" promptText="Item Code" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="7.0" layoutY="212.0" prefHeight="238.0" prefWidth="908.0" style="-fx-border-color: #8F8F8F; -fx-border-width: 2; -fx-border-radius: 10;">
+                     <children>
+                        <TableView fx:id="billingManagementTbl" layoutX="5.0" layoutY="5.0" onMouseClicked="#billingManagementTbl_onMouseClicked" prefHeight="226.0" prefWidth="897.0">
+                           <columns>
+                              <TableColumn prefWidth="100.0" text="Item Code" />
+                              <TableColumn prefWidth="190.0" text="Name" />
+                              <TableColumn prefWidth="92.0" text="Size" />
+                              <TableColumn prefWidth="145.0" text="Category" />
+                              <TableColumn minWidth="0.0" prefWidth="125.0" text="Unit Price" />
+                              <TableColumn minWidth="0.0" prefWidth="97.0" text="Qty" />
+                              <TableColumn maxWidth="217.0" minWidth="0.0" prefWidth="147.0" text="Total" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

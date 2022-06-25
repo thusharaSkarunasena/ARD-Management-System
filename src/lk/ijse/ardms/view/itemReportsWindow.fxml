@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="itemReportsAnchPane" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.ardms.controller.ItemReportsWindowController">
+   <children>
+      <Pane layoutX="10.0" layoutY="14.0" prefHeight="500.0" prefWidth="400.0" style="-fx-border-color: #C7C7C7; -fx-border-radius: 15; -fx-border-width: 2; -fx-background-color: #ffffff;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <JFXButton fx:id="OKBtn" buttonType="RAISED" layoutX="261.0" layoutY="446.0" onAction="#okBtn_onAction" prefHeight="17.0" prefWidth="68.0" style="-fx-border-color: #0099CC; -fx-border-width: 2; -fx-background-color: #ffffff;" styleClass="userProfile-okBtn" stylesheets="@style/itemreportswindow.css" text="OK">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Century Gothic Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <ImageView layoutX="21.0" layoutY="14.0">
+               <image>
+                  <Image url="@../asset/icons8_Pie_Chart_Report_Script_72px_1.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="112.0" layoutY="14.0" text="Item" textFill="#555555">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="161.0" layoutY="54.0" text="Reports" textFill="#555555">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Pane layoutX="7.0" layoutY="97.0" prefHeight="103.0" prefWidth="367.0" style="-fx-border-color: #C7C7C7; -fx-border-radius: 15; -fx-border-style: dashed; -fx-border-width: 2;">
+               <children>
+                  <JFXComboBox fx:id="selectItemComboBox" editable="true" focusColor="#fb6876" labelFloat="true" layoutX="237.0" layoutY="27.0" onAction="#selectItemComboBox_onAction" onKeyReleased="#selectitemComboBox_onKeyReleased" prefHeight="25.0" prefWidth="116.0" promptText="Select a Item" />
+                  <JFXButton fx:id="viewCustomItemReportBtn" buttonType="RAISED" layoutX="248.0" layoutY="64.0" onAction="#viewCustomItemReportBtn_onAction" prefHeight="25.0" prefWidth="94.0" styleClass="otherBtns" stylesheets="@style/itemreportswindow.css" text="View Report" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="viewAllItemsReportBtn" buttonType="RAISED" layoutX="14.0" layoutY="49.0" onAction="#viewAllItemReportBtn_onAction" prefHeight="40.0" prefWidth="170.0" styleClass="otherBtns" stylesheets="@style/itemreportswindow.css" text="View All Items Report" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="49.0" text="Items" underline="true">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="6.0" layoutY="212.0" prefHeight="103.0" prefWidth="367.0" style="-fx-border-color: #C7C7C7; -fx-border-radius: 15; -fx-border-style: dashed; -fx-border-width: 2;">
+               <children>
+                  <JFXComboBox fx:id="selectDamagedItemComboBox" editable="true" focusColor="#fb6876" labelFloat="true" layoutX="241.0" layoutY="27.0" onAction="#selectDamagedItemComboBox_onAction" onKeyReleased="#selectDamagedItemComboBox_onKeyReleased" prefHeight="25.0" prefWidth="116.0" promptText="Damaged Item" />
+                  <JFXButton fx:id="viewCustomDamagedItemReportBtn" buttonType="RAISED" layoutX="252.0" layoutY="64.0" onAction="#viewCustomDamagedItemReportBtn_onAction" prefHeight="25.0" prefWidth="94.0" styleClass="otherBtns" stylesheets="@style/itemreportswindow.css" text="View Report" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="viewAllDamagedItemsReportBtn" buttonType="RAISED" layoutX="14.0" layoutY="49.0" onAction="#viewAllDamagedItemReportBtn_onAction" prefHeight="40.0" prefWidth="170.0" styleClass="otherBtns" stylesheets="@style/itemreportswindow.css" text="View All Damaged&#10;    Items Report" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="94.0" text="Damaged Items" underline="true">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="7.0" layoutY="329.0" prefHeight="103.0" prefWidth="367.0" style="-fx-border-color: #C7C7C7; -fx-border-radius: 15; -fx-border-style: dashed; -fx-border-width: 2;">
+               <children>
+                  <JFXComboBox fx:id="selectitemBrandsComboBox" editable="true" focusColor="#fb6876" labelFloat="true" layoutX="241.0" layoutY="27.0" onAction="#selectitemBrandsComboBox_onAction" onKeyReleased="#selectItemBrandsComboBox_onKeyReleased" prefHeight="25.0" prefWidth="116.0" promptText="Item Brand" />
+                  <JFXButton fx:id="viewCustomItemBrandsReportBtn" buttonType="RAISED" layoutX="252.0" layoutY="64.0" onAction="#viewCustomItemBrandsReportBtn_onAction" prefHeight="25.0" prefWidth="94.0" styleClass="otherBtns" stylesheets="@style/itemreportswindow.css" text="View Report" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="viewAllItemBrandsReportBtn" buttonType="RAISED" layoutX="14.0" layoutY="49.0" onAction="#viewAllItemBrandsReportBtn_onAction" prefHeight="40.0" prefWidth="170.0" styleClass="otherBtns" stylesheets="@style/itemreportswindow.css" text="View All Item&#10;Brands Report" textFill="WHITE">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="94.0" text="Item Brands" underline="true">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

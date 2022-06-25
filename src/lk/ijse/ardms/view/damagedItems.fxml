@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="damagedItemsAnchPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.ardms.controller.DamagedItemsController">
+   <children>
+      <Pane prefHeight="650.0" prefWidth="130.0" style="-fx-background-color: #FF5C58;">
+         <children>
+            <HBox fx:id="homeHBox" layoutX="1.0" onMouseClicked="#loadMainDash" prefHeight="57.0" prefWidth="130.0" styleClass="sidepane-HBox" stylesheets="@style/damageditems.css">
+               <children>
+                  <ImageView>
+                     <image>
+                        <Image url="@../asset/icons8_Home_32px_3.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="8.0" top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="Home" textFill="#2f3438">
+                     <HBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Century Gothic Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="backHBox" layoutY="57.0" onMouseClicked="#loadManageItems" prefHeight="57.0" prefWidth="130.0" styleClass="sidepane-HBox" stylesheets="@style/damageditems.css">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <children>
+                  <ImageView>
+                     <image>
+                        <Image url="@../asset/icons8_Back_Arrow_32px_1.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="8.0" top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="Back" textFill="#2f3438">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="viewMoreHBox" layoutX="2.0" layoutY="114.0" onMouseClicked="#showViewMoreWindow" prefHeight="57.0" prefWidth="130.0" styleClass="sidepane-HBox" stylesheets="@style/damageditems.css">
+               <children>
+                  <ImageView>
+                     <image>
+                        <Image url="@../asset/icons8_View_More_32px_2.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="8.0" top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="View&#10;More" textFill="#2f3438">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="helpHBox" layoutX="1.0" layoutY="171.0" onMouseClicked="#showHelpWindow" prefHeight="57.0" prefWidth="130.0" styleClass="sidepane-HBox" stylesheets="@style/damageditems.css">
+               <children>
+                  <ImageView>
+                     <image>
+                        <Image url="@../asset/icons8_Help_32px_4.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="8.0" top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="Help" textFill="#2f3438">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+         </children>
+      </Pane>
+      <Pane layoutX="130.0" prefHeight="650.0" prefWidth="921.0">
+         <children>
+            <Pane prefHeight="57.0" prefWidth="921.0" style="-fx-background-color: #2F3438;">
+               <children>
+                  <Label layoutX="14.0" layoutY="17.0" text="Manage Items &gt;" textFill="#ff5c58">
+                     <font>
+                        <Font name="Century Gothic Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="57.0" fitWidth="228.0" layoutX="689.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/14462945_1155325894524034_2665961260466615516_n.jpg" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label layoutX="163.0" layoutY="13.0" text="Damaged Items" textFill="#ff5c58">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ImageView fitHeight="656.0" fitWidth="594.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/39461886-clothes-wallpapers.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="656.0" fitWidth="594.0" layoutX="327.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/39461886-clothes-wallpapers.png" />
+               </image>
+            </ImageView>
+            <Pane layoutY="57.0" opacity="0.9" prefHeight="594.0" prefWidth="921.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Pane layoutX="5.0" layoutY="537.0" prefHeight="50.0" prefWidth="911.0" style="-fx-border-radius: 10; -fx-border-color: #C7C7C7; -fx-border-width: 2;">
+                     <children>
+                        <JFXButton fx:id="newBtn" buttonType="RAISED" layoutX="194.0" layoutY="10.0" onAction="#newBtn_onAction" prefHeight="30.0" prefWidth="81.0" styleClass="btnPane-newBtn" stylesheets="@style/damageditems.css" text="New">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Italic" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="addBtn" buttonType="RAISED" layoutX="306.0" layoutY="10.0" onAction="#addBtn_onAction" prefHeight="30.0" prefWidth="81.0" styleClass="btnPane-addBtn" stylesheets="@style/damageditems.css" text="Add">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Italic" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="removeBtn" buttonType="RAISED" layoutX="637.0" layoutY="10.0" onAction="#removeBtn_onAction" prefHeight="30.0" prefWidth="81.0" styleClass="btnPane-removeBtn" stylesheets="@style/damageditems.css" text="Remove">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Italic" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="updateBtn" buttonType="RAISED" layoutX="526.0" layoutY="10.0" onAction="#updateBtn_onAction" prefHeight="30.0" prefWidth="81.0" styleClass="btnPane-updateBtn" stylesheets="@style/damageditems.css" text="Update">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Italic" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="restoreBtn" buttonType="RAISED" layoutX="415.0" layoutY="10.0" onAction="#restoreBtn_onAction" prefHeight="30.0" prefWidth="81.0" styleClass="btnPane-restoreBtn" stylesheets="@style/damageditems.css" text="Restore" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Century Gothic Italic" size="13.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="4.0" layoutY="7.0" prefHeight="521.0" prefWidth="345.0" style="-fx-border-color: #C7C7C7; -fx-border-radius: 15; -fx-border-width: 2;">
+                     <children>
+                        <JFXTextArea fx:id="detailsTF" focusColor="#d64d4b" labelFloat="true" layoutX="19.0" layoutY="450.0" prefHeight="57.0" prefWidth="307.0" promptText="Details" />
+                        <TextField fx:id="itemSearchBoxTF" layoutX="14.0" layoutY="14.0" onKeyReleased="#itemSearchBox_onKeyReleased" onMouseClicked="#itemSearchBox_onAMouseClicked" prefHeight="25.0" prefWidth="195.0" promptText="Search" />
+                        <TableView fx:id="itemTbl" layoutX="9.0" layoutY="59.0" onMouseClicked="#itemTbl_onMouseClicked" prefHeight="276.0" prefWidth="326.0">
+                          <columns>
+                            <TableColumn prefWidth="132.0" text="Item Code" />
+                            <TableColumn prefWidth="193.0" text="Name" />
+                          </columns>
+                        </TableView>
+                        <ImageView layoutX="186.0" layoutY="19.0">
+                           <image>
+                              <Image url="@../asset/icons8_Search_16px_1.png" />
+                           </image>
+                        </ImageView>
+                        <Pane layoutX="7.0" layoutY="338.0" prefHeight="50.0" prefWidth="326.0" style="-fx-border-color: #C7C7C7; -fx-border-radius: 12; -fx-border-width: 1.5;">
+                           <children>
+                              <JFXTextField fx:id="itemcodeTF" editable="false" focusColor="#d64d4b" labelFloat="true" layoutX="20.0" layoutY="17.0" mouseTransparent="true" onMouseClicked="#itemcodeTF_onMouseClicked" prefHeight="25.0" prefWidth="98.0" promptText="Item Code">
+                                 <font>
+                                    <Font name="Times New Roman" size="13.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="itemNameTF" editable="false" focusColor="#d64d4b" labelFloat="true" layoutX="205.0" layoutY="16.0" mouseTransparent="true" onMouseClicked="#itemNameTF_onMouseClicked" prefHeight="25.0" prefWidth="98.0" promptText="Item Name">
+                                 <font>
+                                    <Font name="Times New Roman" size="13.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children>
+                        </Pane>
+                        <JFXTextField fx:id="qtyTF" focusColor="#d64d4b" labelFloat="true" layoutX="20.0" layoutY="401.0" prefHeight="25.0" prefWidth="98.0" promptText="Qty">
+                           <font>
+                              <Font name="Times New Roman" size="13.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="356.0" layoutY="7.0" prefHeight="521.0" prefWidth="560.0" style="-fx-border-color: #C7C7C7; -fx-border-radius: 15; -fx-border-width: 2;">
+                     <children>
+                        <TextField fx:id="damagedItemsSearchBoxTF" layoutX="14.0" layoutY="14.0" onKeyReleased="#damageItemsSearchBox_onKeyReleased" onMouseClicked="#damageItemsSearchBox_onMouseClicked" prefHeight="25.0" prefWidth="195.0" promptText="Search" />
+                        <ImageView layoutX="185.0" layoutY="19.0">
+                           <image>
+                              <Image url="@../asset/icons8_Search_16px_1.png" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="damagedItemsTbl" layoutX="7.0" layoutY="58.0" onMouseClicked="#damageItemsTbl_onMouseClick" prefHeight="452.0" prefWidth="545.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Item Code" />
+                              <TableColumn prefWidth="109.0" text="Name" />
+                              <TableColumn prefWidth="84.0" text="Size" />
+                              <TableColumn minWidth="0.0" prefWidth="93.0" text="Category" />
+                              <TableColumn prefWidth="64.0" text="Qty" />
+                              <TableColumn maxWidth="136.0" minWidth="-1.0" prefWidth="136.0" text="Details" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </Pane>
+               </children></Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

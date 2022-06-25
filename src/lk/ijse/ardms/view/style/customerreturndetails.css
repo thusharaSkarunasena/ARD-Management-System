@@ -1,0 +1,13 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.sidepane-HBox{
+    -fx-background-color: transparent;
+}
+
+.sidepane-HBox:hover{
+    -fx-background-color: #FF7370;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 0px 0px 0px 4px;
+}

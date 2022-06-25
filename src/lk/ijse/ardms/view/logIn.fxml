@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="logInAnchPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.ardms.controller.LogInController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/style-capsule-wardrobe-errands-festival-today-150728-gif_d00787ab3f613605dc46459ed47992d1.fit-760w.gif" />
+         </image>
+      </ImageView>
+      <Pane layoutX="271.0" layoutY="25.0" opacity="0.8" prefHeight="350.0" prefWidth="280.0" style="-fx-background-color: #ffffff; -fx-border-color: #FF7800; -fx-border-width: 3; -fx-border-radius: 10;">
+         <children>
+            <Label layoutX="28.0" layoutY="65.0" text="Login here,">
+               <font>
+                  <Font name="Century Gothic Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="usernameTF" focusColor="#ff7800" labelFloat="true" layoutX="51.0" layoutY="116.0" onAction="#usernameTF_onAction" prefHeight="25.0" prefWidth="198.0" promptText="Username">
+               <font>
+                  <Font name="Century Gothic Bold Italic" size="14.0" />
+               </font></JFXTextField>
+            <JFXPasswordField fx:id="passwordPF" focusColor="#ff7800" labelFloat="true" layoutX="51.0" layoutY="173.0" onAction="#passwordPF_onAction" prefHeight="25.0" prefWidth="198.0" promptText="Password">
+               <font>
+                  <Font name="Century Gothic Bold Italic" size="14.0" />
+               </font></JFXPasswordField>
+            <JFXButton fx:id="logInBtn" buttonType="RAISED" layoutX="177.0" layoutY="250.0" onAction="#logInBtn_onAction" prefHeight="28.0" prefWidth="86.0" styleClass="logInPane-logInBtn" stylesheets="@style/login.css" text="Log In">
+               <font>
+                  <Font name="Century Gothic Bold Italic" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label fx:id="errorMessageLbl" layoutX="40.0" layoutY="291.0" lineSpacing="1.0" prefHeight="39.0" prefWidth="225.0" textFill="#d91022">
+               <font>
+                  <Font name="Century Gothic Italic" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

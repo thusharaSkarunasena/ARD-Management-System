@@ -1,0 +1,223 @@
+DROP DATABASE IF EXISTS ardms;
+CREATE DATABASE ardms;
+USE ardms;
+
+DROP TABLE IF EXISTS customer;
+CREATE TABLE customer(
+	cusid VARCHAR(25),
+	name VARCHAR(50) not null,
+	address_no VARCHAR(15) not null,
+	address_street VARCHAR(50),
+	address_village VARCHAR(30),
+	address_city VARCHAR(30),
+	nic VARCHAR(15) not null,
+	tel_home VARCHAR(15),
+	tel_mobile VARCHAR(15),
+	email VARCHAR(50),
+	CONSTRAINT PRIMARY KEY(cusid)
+);
+
+
+DROP TABLE IF EXISTS supplier;
+CREATE TABLE supplier(
+	supid VARCHAR(25),
+	name VARCHAR(50) not null,
+	company VARCHAR(50) not null,
+	address_no VARCHAR(15) not null,
+	address_street VARCHAR(50),
+	address_village VARCHAR(30),
+	address_city VARCHAR(30),
+	nic VARCHAR(15) not null,
+	tel_office VARCHAR(15),
+	tel_mobile VARCHAR(15),
+	email VARCHAR(50),
+	other VARCHAR(250),
+	CONSTRAINT PRIMARY KEY(supid)	
+);
+
+
+DROP TABLE IF EXISTS employee;
+CREATE TABLE employee(
+	empid VARCHAR(25),
+	name VARCHAR(50) not null,
+	employment VARCHAR(50) not null,
+	address_no VARCHAR(15) not null,
+	address_street VARCHAR(50),
+	address_village VARCHAR(30),
+	address_city VARCHAR(30),
+	nic VARCHAR(15) not null,
+	tel_home VARCHAR(15),
+	tel_mobile VARCHAR(15),
+	other VARCHAR(250),
+	CONSTRAINT PRIMARY KEY(empid)
+);
+
+
+DROP TABLE IF EXISTS brand;
+CREATE TABLE brand(
+	braid VARCHAR(25),
+	name VARCHAR(50) not null,
+	description VARCHAR(250),
+	other_details VARCHAR(250),
+	CONSTRAINT PRIMARY KEY(braid)
+);
+
+
+DROP TABLE IF EXISTS category;
+CREATE TABLE category(
+	catid VARCHAR(25),
+	name VARCHAR(50) not null,
+	description VARCHAR(250),
+	other_details VARCHAR(250),
+	CONSTRAINT PRIMARY KEY(catid)
+);
+
+
+DROP TABLE IF EXISTS item;
+CREATE TABLE item(
+	itemcode VARCHAR(25),
+	catid VARCHAR(25) not null,
+	braid VARCHAR(25),
+	supid VARCHAR(25) not null,
+	name VARCHAR(50) not null,
+	description VARCHAR(250),
+	size VARCHAR(25) not null,
+	price DECIMAL(25,2) not null,
+	qty INT(10) not null,
+	other_details VARCHAR(250),
+	CONSTRAINT PRIMARY KEY(itemcode),
+	CONSTRAINT FOREIGN KEY(catid) REFERENCES category(catid),
+	CONSTRAINT FOREIGN KEY(braid) REFERENCES brand(braid),
+	CONSTRAINT FOREIGN KEY(supid) REFERENCES supplier(supid)
+);
+
+
+
+DROP TABLE IF EXISTS bill;
+CREATE TABLE bill(
+	refno VARCHAR(25),
+	billno VARCHAR(25),
+	cusid VARCHAR(25),
+	date VARCHAR(10),
+	CONSTRAINT PRIMARY KEY(refno),
+	CONSTRAINT FOREIGN KEY(cusid) REFERENCES customer(cusid)
+);
+
+
+DROP TABLE IF EXISTS bill_detail;
+CREATE TABLE bill_detail(
+	refno VARCHAR(25),
+	itemcode VARCHAR(25),
+	price DECIMAL(10,2),
+	qty INT(10),
+	amount_for_qty DECIMAL(25,2),
+	CONSTRAINT PRIMARY KEY(refno, itemcode),
+	CONSTRAINT FOREIGN KEY(refno) REFERENCES bill(refno),
+	CONSTRAINT FOREIGN KEY(itemcode) REFERENCES item(itemcode)
+);
+
+DROP TABLE IF EXISTS customer_payment;
+CREATE TABLE customer_payment(
+	bill_payment_no VARCHAR(25),
+	refno VARCHAR(25),
+	empid VARCHAR(25),
+	payment_type VARCHAR(10),
+	tot_amount DECIMAL(25,2),
+	discount DECIMAL(25,2),
+	net_amount DECIMAL(25,2),
+	payble_total DECIMAL(25,2),
+	CONSTRAINT PRIMARY KEY(bill_payment_no),
+	CONSTRAINT FOREIGN KEY(refno) REFERENCES bill(refno),
+	CONSTRAINT FOREIGN KEY(empid) REFERENCES employee(empid)
+);
+
+
+DROP TABLE IF EXISTS orders;
+CREATE TABLE orders(
+	order_no VARCHAR(10),
+	supid VARCHAR(10),
+	date VARCHAR(10),
+	CONSTRAINT PRIMARY KEY(order_no),
+	CONSTRAINT FOREIGN KEY(supid) REFERENCES supplier(supid)
+);
+
+
+DROP TABLE IF EXISTS order_detail;
+CREATE TABLE order_detail(
+	order_detail_no VARCHAR(25),
+	order_no VARCHAR(25),
+	itemcode VARCHAR(25),
+	price DECIMAL(25,2),
+	qty INT(10),
+	amount_for_qty DECIMAL(25,2),
+	CONSTRAINT PRIMARY KEY(order_detail_no),
+	CONSTRAINT FOREIGN KEY(order_no) REFERENCES orders(order_no),
+	CONSTRAINT FOREIGN KEY(itemcode) REFERENCES item(itemcode)
+);
+
+
+DROP TABLE IF EXISTS order_payment;
+CREATE TABLE order_payment(
+	order_payment_no VARCHAR(25),
+	order_detail_no VARCHAR(25),
+	empid VARCHAR(25),
+	tot_amount DECIMAL(25,2),
+	discount DECIMAL(25,2),
+	other_charges DECIMAL(25,2),
+	net_amount DECIMAL(25,2),
+	payment_type VARCHAR(10),
+	other_details VARCHAR(250),
+	CONSTRAINT PRIMARY KEY(order_payment_no),
+	CONSTRAINT FOREIGN KEY(order_detail_no) REFERENCES order_detail(order_detail_no),
+	CONSTRAINT FOREIGN KEY(empid) REFERENCES employee(empid)
+);
+
+
+DROP TABLE IF EXISTS damaged_item;
+CREATE TABLE damaged_item(
+	itemcodeInItem VARCHAR(25),
+	itemName VARCHAR(100),
+	size VARCHAR(10),
+	category VARCHAR(25),
+	qty INT(25),
+	details VARCHAR(250),
+	CONSTRAINT PRIMARY KEY(itemcodeInItem)
+);
+
+DROP TABLE IF EXISTS userpass;
+CREATE TABLE userpass(
+	username VARCHAR(25),
+	password VARCHAR(25),
+	empid VARCHAR(25),
+	CONSTRAINT PRIMARY KEY(username),
+	CONSTRAINT FOREIGN KEY(empid) REFERENCES employee(empid)
+);
+
+DROP TABLE IF EXISTS customer_return;
+CREATE TABLE customer_return(
+	crno VARCHAR(25),
+	refno VARCHAR(25),
+	status VARCHAR(25),
+
+	returnItemcode1 VARCHAR(25),
+	returnItemQty1 INT(25),
+	returnItemcode2 VARCHAR(25),
+	returnItemQty2 INT(25),
+	returnItemcode3 VARCHAR(25),
+	returnItemQty3 INT(25),
+	returnItemcode4 VARCHAR(25),
+	returnItemQty4 INT(25),
+	returnItemcode5 VARCHAR(25),
+	returnItemQty5 INT(25),
+	
+	details VARCHAR(250),
+	releasedAmount DECIMAL(25,2),
+	CONSTRAINT PRIMARY KEY(crno),
+	CONSTRAINT FOREIGN KEY(refno) REFERENCES bill_detail(refno)
+);
+
+# ------------------------------------------------------------------------------
+
+
+INSERT INTO employee VALUES ("EMP-000", "name", "employment", "address_no", "address_street", "address_village", "address_city", "nic", "tel_home", "tel_mobile", "other" );
+INSERT INTO userpass VALUES ("admin", "admin", "EMP-000");

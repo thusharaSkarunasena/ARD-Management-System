@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="welcomeAnchPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.ardms.controller.WelcomeController">
+   <children>
+      <ImageView pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/red-white-wallpapers-25296-671227.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="203.0" fitWidth="357.0" layoutX="29.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/14522718_1155269707862986_378334156521158365_n.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="131.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/loader.gif" />
+         </image>
+      </ImageView>
+      <Label layoutX="216.0" layoutY="377.0" prefHeight="18.0" prefWidth="169.0" text="Copyright       2018 by Thushara" textFill="#898989">
+         <font>
+            <Font name="Century Schoolbook Bold" size="10.0" />
+         </font>
+      </Label>
+      <ImageView layoutX="274.0" layoutY="379.0">
+         <image>
+            <Image url="@../asset/icons8_Copyright_15px_3.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

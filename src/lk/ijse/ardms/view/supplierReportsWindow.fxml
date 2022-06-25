@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="supplierReportsAnchPane" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.ardms.controller.SupplierReportsWindowController">
+   <children>
+      <Pane layoutX="10.0" layoutY="14.0" prefHeight="500.0" prefWidth="400.0" style="-fx-border-color: #C7C7C7; -fx-border-radius: 15; -fx-border-width: 2; -fx-background-color: #ffffff;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <JFXButton fx:id="OKBtn" buttonType="RAISED" layoutX="275.0" layoutY="439.0" onAction="#OkBtn_onAction" prefHeight="17.0" prefWidth="68.0" style="-fx-border-color: #0099CC; -fx-border-width: 2; -fx-background-color: #ffffff;" styleClass="okBtn" stylesheets="@style/supplierreportswindow.css" text="OK">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Century Gothic Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="viewAllSuppliersReportBtn" buttonType="RAISED" layoutX="83.0" layoutY="333.0" onAction="#viewAllSuppliersReportBtn_onAction" prefHeight="25.0" prefWidth="214.0" styleClass="otherBtns" stylesheets="@style/supplierreportswindow.css" text="View All Supplier Report" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXComboBox fx:id="selectSupplierComboBox" editable="true" focusColor="#fb6876" labelFloat="true" layoutX="120.0" layoutY="173.0" onAction="#selectSupplierComboBox_onAction" onKeyReleased="#selectSupplierComboBox_onKeyReleased" prefHeight="25.0" prefWidth="129.0" promptText="Select a Supplier" />
+            <JFXButton fx:id="viewCustomSupplierReportBtn" buttonType="RAISED" layoutX="124.0" layoutY="215.0" onAction="#viewCustomSupplierReportBtn_onAction" prefHeight="25.0" prefWidth="121.0" styleClass="otherBtns" stylesheets="@style/supplierreportswindow.css" text="View Report" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView layoutX="21.0" layoutY="19.0">
+               <image>
+                  <Image url="@../asset/icons8_Pie_Chart_Report_Script_72px_1.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="112.0" layoutY="19.0" text="Supplier" textFill="#555555">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="209.0" layoutY="59.0" text="Reports" textFill="#555555">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

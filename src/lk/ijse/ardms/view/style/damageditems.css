@@ -1,0 +1,103 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.sidepane-HBox{
+    -fx-background-color: transparent;
+}
+
+.sidepane-HBox:hover{
+    -fx-background-color: #FF7370;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 0px 0px 0px 4px;
+}
+
+.btnPane-newBtn{
+    -fx-background-color: #0099CC;
+    -fx-background-radius: 22;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #0099CC;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}
+
+.btnPane-newBtn:hover{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 22;
+    -fx-text-fill: #0099CC;
+    -fx-border-color: #0099CC;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}
+
+.btnPane-addBtn{
+    -fx-background-color: #00BD93;
+    -fx-background-radius: 22;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #00BD93;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}
+
+.btnPane-addBtn:hover{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 22;
+    -fx-text-fill: #00BD93;
+    -fx-border-color: #00BD93;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}
+
+.btnPane-updateBtn{
+    -fx-background-color: #FF7800;
+    -fx-background-radius: 22;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #FF7800;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}
+
+.btnPane-updateBtn:hover{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 22;
+    -fx-text-fill: #FF7800;
+    -fx-border-color: #FF7800;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}
+
+.btnPane-removeBtn{
+    -fx-background-color: #DF574B;
+    -fx-background-radius: 22;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #DF574B;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}
+
+.btnPane-removeBtn:hover{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 22;
+    -fx-text-fill: #DF574B;
+    -fx-border-color: #DF574B;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}
+
+.btnPane-restoreBtn{
+    -fx-background-color: #F64E8B;
+    -fx-background-radius: 22;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #F64E8B;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}
+
+.btnPane-restoreBtn:hover{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 22;
+    -fx-text-fill: #F64E8B;
+    -fx-border-color: #F64E8B;
+    -fx-border-radius: 20;
+    -fx-border-width: 2;
+}

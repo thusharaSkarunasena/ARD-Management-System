@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="reportManagementAnchPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.ardms.controller.ReportManagementController">
+   <children>
+      <Pane prefHeight="650.0" prefWidth="130.0" style="-fx-background-color: #FF5C58;">
+         <children>
+            <HBox fx:id="homeHBox" layoutX="1.0" onMouseClicked="#loadMainDash" prefHeight="57.0" prefWidth="130.0" styleClass="sidepane-HBox" stylesheets="@style/reportmanagement.css">
+               <children>
+                  <ImageView>
+                     <image>
+                        <Image url="@../asset/icons8_Home_32px_3.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="8.0" top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="Home" textFill="#2f3438">
+                     <HBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Century Gothic Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="helpHBox" layoutY="114.0" onMouseClicked="#showHelpWindow" prefHeight="57.0" prefWidth="130.0" styleClass="sidepane-HBox" stylesheets="@style/reportmanagement.css">
+               <children>
+                  <ImageView>
+                     <image>
+                        <Image url="@../asset/icons8_Help_32px_4.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="8.0" top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="Help" textFill="#2f3438">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="viewMoreHBox" layoutY="57.0" onMouseClicked="#showViewMoreWindow" prefHeight="57.0" prefWidth="130.0" styleClass="sidepane-HBox" stylesheets="@style/reportmanagement.css">
+               <children>
+                  <ImageView>
+                     <image>
+                        <Image url="@../asset/icons8_View_More_32px_2.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="8.0" top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="View&#10;More" textFill="#2f3438">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+         </children>
+      </Pane>
+      <Pane layoutX="130.0" prefHeight="650.0" prefWidth="921.0">
+         <children>
+            <Pane prefHeight="57.0" prefWidth="921.0" style="-fx-background-color: #2F3438;">
+               <children>
+                  <ImageView fitHeight="57.0" fitWidth="228.0" layoutX="689.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/14462945_1155325894524034_2665961260466615516_n.jpg" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label layoutX="14.0" layoutY="13.0" text="Report Management" textFill="#ff5c58">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ImageView fitHeight="656.0" fitWidth="594.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/39461886-clothes-wallpapers.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="656.0" fitWidth="594.0" layoutX="327.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/39461886-clothes-wallpapers.png" />
+               </image>
+            </ImageView>
+            <Pane layoutY="57.0" opacity="0.9" prefHeight="594.0" prefWidth="921.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <ImageView fx:id="customerReportsIcon" layoutX="120.0" layoutY="91.0" onMouseClicked="#customerReports_onMouseClicked" onMouseEntered="#mouseEnterReportIcon" onMouseExited="#mouseExitReportIcon">
+                     <image>
+                        <Image url="@../asset/icons8_Male_User_84px_3.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="customerPaymentReportsIcon" layoutX="413.0" layoutY="87.0" onMouseClicked="#customerPaymentReports_onMouseClicked" onMouseEntered="#mouseEnterReportIcon" onMouseExited="#mouseExitReportIcon">
+                     <image>
+                        <Image url="@../asset/icons8_Bill_84px_1.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="itemReportsIcon" layoutX="699.0" layoutY="83.0" onMouseClicked="#itemReports_onMouseClicked" onMouseEntered="#mouseEnterReportIcon" onMouseExited="#mouseExitReportIcon">
+                     <image>
+                        <Image url="@../asset/icons8_Clothes_84px_1.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="supplierReportsIcon" layoutX="138.0" layoutY="336.0" onMouseClicked="#supplierReports_onMouseClicked" onMouseEntered="#mouseEnterReportIcon" onMouseExited="#mouseExitReportIcon">
+                     <image>
+                        <Image url="@../asset/icons8_Supplier_84px_1.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="employeeReportsIcon" layoutX="405.0" layoutY="328.0" onMouseClicked="#employeeReports_onMouseClicked" onMouseEntered="#mouseEnterReportIcon" onMouseExited="#mouseExitReportIcon">
+                     <image>
+                        <Image url="@../asset/icons8_Payroll_84px_1.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView layoutX="172.0" layoutY="151.0">
+                     <image>
+                        <Image url="@../asset/icons8_Pie_Chart_Report_Script_32px_1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="465.0" layoutY="147.0">
+                     <image>
+                        <Image url="@../asset/icons8_Pie_Chart_Report_Script_32px_1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="741.0" layoutY="143.0">
+                     <image>
+                        <Image url="@../asset/icons8_Pie_Chart_Report_Script_32px_1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="206.0" layoutY="396.0">
+                     <image>
+                        <Image url="@../asset/icons8_Pie_Chart_Report_Script_32px_1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="473.0" layoutY="388.0">
+                     <image>
+                        <Image url="@../asset/icons8_Pie_Chart_Report_Script_32px_1.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="CustomerReportsLbl" layoutX="79.0" layoutY="205.0" style="-fx-font-size: 20px;" text="Customer Reports">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" />
+                     </font></Label>
+                  <Label fx:id="customerPaymentReportsLbl" layoutX="334.0" layoutY="205.0" style="-fx-font-size: 20px;" text="Customer Payment Reports">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" />
+                     </font></Label>
+                  <Label fx:id="itemReportsLbl" layoutX="684.0" layoutY="205.0" style="-fx-font-size: 20px;" text="Item Reports">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" />
+                     </font></Label>
+                  <Label fx:id="supplierReportsLbl" layoutX="99.0" layoutY="452.0" style="-fx-font-size: 20px;" text="Supplier Reports">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" />
+                     </font></Label>
+                  <Label fx:id="employeeReportsLbl" layoutX="375.0" layoutY="452.0" style="-fx-font-size: 20px;" text="Employee Reports">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" />
+                     </font></Label>
+                  <Label fx:id="reportsSettingsLbl" layoutX="668.0" layoutY="452.0" style="-fx-font-size: 20px;" text="Reports Settings">
+                     <font>
+                        <Font name="Century Gothic Bold Italic" />
+                     </font></Label>
+                  <ImageView fx:id="ReportsSettingsIcon" layoutX="699.0" layoutY="328.0" onMouseClicked="#reportsSettings_onMouseClicked" onMouseEntered="#mouseEnterReportIcon" onMouseExited="#mouseExitReportIcon">
+                     <image>
+                        <Image url="@../asset/icons8_Settings_84px_3.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView layoutX="741.0" layoutY="388.0">
+                     <image>
+                        <Image url="@../asset/icons8_Pie_Chart_Report_Script_32px_1.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
